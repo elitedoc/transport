@@ -1,4 +1,4 @@
-package dao;
+package dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
+import dao.BonLivraisonDAO;
 import model.BonLivraison;
 import model.Client;
 

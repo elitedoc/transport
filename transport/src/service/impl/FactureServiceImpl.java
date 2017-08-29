@@ -1,9 +1,10 @@
-package service;
+package service.impl;
 
 import java.util.List;
 
 import dao.FactureDAO;
 import model.Facture;
+import service.FactureService;
 
 public class FactureServiceImpl implements FactureService {
 	

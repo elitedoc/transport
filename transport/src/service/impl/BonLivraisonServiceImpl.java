@@ -1,9 +1,10 @@
-package service;
+package service.impl;
 
 import java.util.List;
 
 import dao.BonLivraisonDAO;
 import model.BonLivraison;
+import service.BonLivraisonService;
 
 public class BonLivraisonServiceImpl implements BonLivraisonService {
 	

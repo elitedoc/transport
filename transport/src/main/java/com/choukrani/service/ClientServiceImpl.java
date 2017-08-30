@@ -1,10 +1,9 @@
-package service.impl;
+package com.choukrani.service;
 
 import java.util.List;
 
-import dao.ClientDAO;
-import model.Client;
-import service.ClientService;
+import com.choukrani.dao.ClientDAO;
+import com.choukrani.model.Client;
 
 public class ClientServiceImpl implements ClientService {
 	

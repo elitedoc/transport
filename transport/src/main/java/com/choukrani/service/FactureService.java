@@ -1,8 +1,8 @@
-package service;
+package com.choukrani.service;
 
 import java.util.List;
 
-import model.Facture;
+import com.choukrani.model.Facture;
 
 public interface FactureService {
 	

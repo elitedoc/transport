@@ -1,10 +1,10 @@
-package dao;
+package com.choukrani.service;
 
 import java.util.List;
 
-import model.Client;
+import com.choukrani.model.Client;
 
-public interface ClientDAO {
+public interface ClientService {
 	
 	void save(Client client);
 	void update(Client client);

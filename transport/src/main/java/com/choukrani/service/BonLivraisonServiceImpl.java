@@ -1,10 +1,9 @@
-package service.impl;
+package com.choukrani.service;
 
 import java.util.List;
 
-import dao.BonLivraisonDAO;
-import model.BonLivraison;
-import service.BonLivraisonService;
+import com.choukrani.dao.BonLivraisonDAO;
+import com.choukrani.model.BonLivraison;
 
 public class BonLivraisonServiceImpl implements BonLivraisonService {
 	

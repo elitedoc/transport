@@ -1,10 +1,9 @@
-package service.impl;
+package com.choukrani.service;
 
 import java.util.List;
 
-import dao.FactureDAO;
-import model.Facture;
-import service.FactureService;
+import com.choukrani.dao.FactureDAO;
+import com.choukrani.model.Facture;
 
 public class FactureServiceImpl implements FactureService {
 	

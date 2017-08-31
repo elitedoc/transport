@@ -2,9 +2,18 @@ package com.choukrani.service;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.choukrani.dao.FactureDAO;
 import com.choukrani.model.Facture;
 
+@Service
+@ManagedBean(name="factureService")
+@SessionScoped
 public class FactureServiceImpl implements FactureService {
 	
 	FactureDAO factureDAO;
@@ -15,34 +24,21 @@ public class FactureServiceImpl implements FactureService {
 		this.factureDAO = factureDAO;
 	}
 
-	@Override
-	public void save(Facture facture) {
-		factureDAO.save(facture);
 
-	}
 
 	@Override
-	public void update(Facture facture) {
-		factureDAO.update(facture);
-
-	}
-
-	@Override
-	public void delete(Facture facture) {
-		factureDAO.delete(facture);
-
-	}
-
-	@Override
-	public Facture findByFactureId(int factureId) {
+	@Transactional
+	public void ajouterFacture(Facture fact) {
+		this.factureDAO.ajouterFacture(fact);
 		
-		return factureDAO.findByFactureId(factureId);
 	}
 
+
+
 	@Override
-	public List<Facture> getListeFacture() {
-		
-		return factureDAO.getListeFacture();
+	@Transactional
+	public List<Facture> listerFactures() {
+		return this.factureDAO.listerFactures();
 	}
 
 }

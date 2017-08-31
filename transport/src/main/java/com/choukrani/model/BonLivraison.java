@@ -11,8 +11,8 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 @Entity  
-@Table(name= "bon_livraison")
-@ManagedBean(name="bonlivraison")
+@Table(name= "BON_LIVRAISON")
+@ManagedBean(name="bonLivraison")
 public class BonLivraison {
 	
 	@Id
@@ -36,9 +36,9 @@ public class BonLivraison {
 	
 	private float montant_ht;
 	
-	private Client client;
+//	private Client client;
 	
-	private Facture facture;
+//	private Facture facture;
 	
 	public int getBon_livraison_id() {
 		return bon_livraison_id;
@@ -112,28 +112,28 @@ public class BonLivraison {
 		this.montant_ht = montant_ht;
 	}
 	
-	public Client getClient() {
-		return client;
-	}
-	
-	public void setClient(Client client) {
-		this.client = client;
-	}
-	
-	public Facture getFacture() {
-		return facture;
-	}
-	
-	public void setFacture(Facture facture) {
-		this.facture = facture;
-	}
+//	public Client getClient() {
+//		return client;
+//	}
+//	
+//	public void setClient(Client client) {
+//		this.client = client;
+//	}
+//	
+//	public Facture getFacture() {
+//		return facture;
+//	}
+//	
+//	public void setFacture(Facture facture) {
+//		this.facture = facture;
+//	}
 
 	@Override
 	public String toString() {
 		return "BonLivraison [bon_livraison_id=" + bon_livraison_id + ", numero_bon_livraison=" + numero_bon_livraison
 				+ ", date_bon_livraison=" + date_bon_livraison + ", depart=" + depart + ", destination=" + destination
 				+ ", quantite=" + quantite + ", tarif=" + tarif + ", prix_unitaire=" + prix_unitaire + ", montant_ht="
-				+ montant_ht + ", client=" + client + ", facture=" + facture + "]";
+				+ montant_ht + ", client=" /*+ client*/ + ", facture=" /*+ facture*/ + "]";
 	}
 
 }

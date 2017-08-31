@@ -24,19 +24,20 @@ public class BonLivraisonDAOImpl implements BonLivraisonDAO {
 	@Override
 	public void ajouterBonLivraison(BonLivraison bl) {
 		Session session = this.sessionFactory.getCurrentSession();
-        session.persist(cl);
-        logger.info("Client enregistre correctement, Client="+cl);
+        session.persist(bl);
+        logger.info("Bon de livraison enregistre correctement, BL="+bl);
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<BonLivraison> listerBonLivraison() {
 		Session session = this.sessionFactory.getCurrentSession();
-        List<Client> listeClients = session.createQuery("from client").list();
-        for(Client cl : listeClients){
-            logger.info("Liste Clients::"+cl);
+        List<BonLivraison> listeBonLivraison = session.createQuery("from BonLivraison").list();
+        for(BonLivraison bl : listeBonLivraison){
+            logger.info("Liste Bon de Livraison::"+bl);
         }
-        return listeClients;
+        return listeBonLivraison;
 	}
 
 }

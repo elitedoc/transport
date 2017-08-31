@@ -32,7 +32,7 @@ public class ClientDAOImpl implements ClientDAO {
 	@Override
 	public List<Client> listerClients() {
 		Session session = this.sessionFactory.getCurrentSession();
-        List<Client> listeClients = session.createQuery("from client").list();
+        List<Client> listeClients = session.createQuery("from Client").list();
         for(Client cl : listeClients){
             logger.info("Liste Clients::"+cl);
         }

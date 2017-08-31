@@ -2,9 +2,18 @@ package com.choukrani.service;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.choukrani.dao.BonLivraisonDAO;
 import com.choukrani.model.BonLivraison;
 
+@Service
+@ManagedBean(name="bonLivraisonService")
+@SessionScoped
 public class BonLivraisonServiceImpl implements BonLivraisonService {
 	
 	BonLivraisonDAO bonLivraisonDAO;
@@ -14,33 +23,16 @@ public class BonLivraisonServiceImpl implements BonLivraisonService {
 	}
 
 	@Override
-	public void save(BonLivraison bonLivraison) {
-		bonLivraisonDAO.save(bonLivraison);
-
-	}
-
-	@Override
-	public void update(BonLivraison bonLivraison) {
-		bonLivraisonDAO.update(bonLivraison);
-
-	}
-
-	@Override
-	public void delete(BonLivraison bonLivraison) {
-		bonLivraisonDAO.delete(bonLivraison);
-
-	}
-
-	@Override
-	public BonLivraison findByBonLivraisonId(int bonLivraisonId) {
+	@Transactional
+	public void ajouterBonLivraison(BonLivraison bl) {
+		this.bonLivraisonDAO.ajouterBonLivraison(bl);
 		
-		return bonLivraisonDAO.findByBonLivraisonId(bonLivraisonId);
 	}
 
 	@Override
-	public List<BonLivraison> getListeBonLivraison() {
-		
-		return bonLivraisonDAO.getListeBonLivraison();
+	@Transactional
+	public List<BonLivraison> listerBonLivraison() {
+		return this.bonLivraisonDAO.listerBonLivraison();
 	}
 
 }

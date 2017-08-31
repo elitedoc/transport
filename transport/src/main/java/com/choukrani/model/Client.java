@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity  
-@Table(name= "client")
+@Table(name= "CLIENT")
 @ManagedBean(name="client")
 public class Client {
 	

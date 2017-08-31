@@ -33,7 +33,7 @@ public class FactureDAOImpl implements FactureDAO {
 	@Override
 	public List<Facture> listerFactures() {
 		Session session = this.sessionFactory.getCurrentSession();
-        List<Facture> listeFactures = session.createQuery("from facture").list();
+        List<Facture> listeFactures = session.createQuery("from Facture").list();
         for(Facture fact : listeFactures){
             logger.info("Liste Factures::"+fact);
         }

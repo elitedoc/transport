@@ -2,9 +2,18 @@ package com.choukrani.service;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.choukrani.dao.ClientDAO;
 import com.choukrani.model.Client;
 
+@Service
+@ManagedBean(name="clientService")
+@SessionScoped
 public class ClientServiceImpl implements ClientService {
 	
 	ClientDAO clientDAO;
@@ -14,33 +23,18 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public void save(Client client) {
-		clientDAO.save(client);
-
-	}
-
-	@Override
-	public void update(Client client) {
-		clientDAO.update(client);
-
-	}
-
-	@Override
-	public void delete(Client client) {
-		clientDAO.delete(client);
-
-	}
-
-	@Override
-	public Client findByClientId(int clientId) {
+	@Transactional
+	public void ajouterClient(Client cl) {
+		this.clientDAO.ajouterClient(cl);
 		
-		return clientDAO.findByClientId(clientId);
 	}
 
 	@Override
-	public List<Client> getListeClient() {
-		
-		return clientDAO.getListeClient();
+	@Transactional
+	public List<Client> listerClients() {
+		return this.clientDAO.listerClients();
 	}
+
+	
 
 }

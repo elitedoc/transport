@@ -11,12 +11,12 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 @Entity  
-@Table(name= "facture")
+@Table(name= "FACTURE")
 @ManagedBean(name="facture")
 public class Facture {
 
 	@Id
-	@Column(name="bon_livraison_id")
+	@Column(name="facture_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int facture_id;
 	
@@ -32,7 +32,7 @@ public class Facture {
 	
 	private float total_tvac;
 	
-	private Client client;
+//	private Client client;
 	
 	public int getFacture_id() {
 		return facture_id;
@@ -90,18 +90,18 @@ public class Facture {
 		this.total_tvac = total_tvac;
 	}
 	
-	public Client getClient() {
-		return client;
-	}
-	
-	public void setClient(Client client) {
-		this.client = client;
-	}
+//	public Client getClient() {
+//		return client;
+//	}
+//	
+//	public void setClient(Client client) {
+//		this.client = client;
+//	}
 
 	@Override
 	public String toString() {
 		return "Facture [facture_id=" + facture_id + ", numero_facture=" + numero_facture + ", date_facture="
 				+ date_facture + ", commentaire=" + commentaire + ", total_htva=" + total_htva + ", tva=" + tva
-				+ ", total_tvac=" + total_tvac + ", client=" + client + "]";
+				+ ", total_tvac=" + total_tvac + ", client=" /*+ client*/ + "]";
 	}
 }

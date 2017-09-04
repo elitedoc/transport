@@ -40,4 +40,27 @@ public class BonLivraisonDAOImpl implements BonLivraisonDAO {
         return listeBonLivraison;
 	}
 
+	@Override
+	public void modifierBonLivraison(BonLivraison bl) {
+		Session session = this.sessionFactory.getCurrentSession();
+        session.saveOrUpdate(bl);
+        logger.info("Bon de livraison modifie correctement, BL="+bl);
+		
+	}
+
+	@Override
+	public void supprimerBonLivraison(Long id) {
+		Session session = this.sessionFactory.getCurrentSession();
+        session.delete(session.get(BonLivraison.class, id));
+        logger.info("Bon de livraison supprime correctement, ID="+id);
+		
+	}
+
+	@Override
+	public BonLivraison recupererBonLivraison(Long id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		return (BonLivraison)session.get(BonLivraison.class, id);
+		
+	}
+
 }

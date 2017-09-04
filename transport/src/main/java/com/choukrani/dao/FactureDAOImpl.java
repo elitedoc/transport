@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import com.choukrani.model.BonLivraison;
 import com.choukrani.model.Client;
 import com.choukrani.model.Facture;
 
@@ -38,6 +39,29 @@ public class FactureDAOImpl implements FactureDAO {
             logger.info("Liste Factures::"+fact);
         }
         return listeFactures;
+	}
+
+	@Override
+	public void modifierFacture(Facture fact) {
+		Session session = this.sessionFactory.getCurrentSession();
+        session.saveOrUpdate(fact);
+        logger.info("Facture modifiee correctement, Facture="+fact);
+		
+	}
+
+	@Override
+	public void supprimerFacture(Long id) {
+		Session session = this.sessionFactory.getCurrentSession();
+        session.delete(session.get(Facture.class, id));
+        logger.info("Facture supprimee correctement, ID="+id);
+		
+	}
+
+	@Override
+	public Facture recupererFacture(Long id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		return (Facture)session.get(Facture.class, id);
+		
 	}
 
 }

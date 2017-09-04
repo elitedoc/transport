@@ -8,5 +8,8 @@ public interface FactureDAO {
 	
 	public void ajouterFacture(Facture fact);
     public List<Facture> listerFactures();
+    public void modifierFacture(Facture fact);
+	public void supprimerFacture(Long id);
+	public Facture recupererFacture(Long id);
 
 }

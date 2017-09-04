@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<!-- Script de traduction du calendrier -->
+	<script type="text/javascript">
+		PrimeFaces.locales['fr'] = {
+			closeText : 'Fermer',
+			prevText : 'Précédent',
+			nextText : 'Suivant',
+			currentText : 'Aujourd\'hui',
+			monthNames : [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai',
+					'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre',
+					'Novembre', 'Décembre' ],
+			monthNamesShort : [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun',
+					'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ],
+			dayNames : [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi',
+					'Vendredi', 'Samedi' ],
+			dayNamesShort : [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+			dayNamesMin : [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+			weekHeader : 'Semaine',
+			firstDay : 1,
+			isRTL : false,
+			showMonthAfterYear : false,
+			yearSuffix : '',
+			timeOnlyTitle : 'Choisir l\'heure',
+			timeText : 'Heure',
+			hourText : 'Heures',
+			minuteText : 'Minutes',
+			secondText : 'Secondes',
+			currentText : 'Maintenant',
+			ampm : false,
+			month : 'Mois',
+			week : 'Semaine',
+			day : 'Jour',
+			allDayText : 'Toute la journée'
+		};
+	</script>
+</h:head>
+<h:body>
+	<p:dialog id="modificationID"
+		header="#{msgBundle.client_header_modification}" modal="true"
+		closable="true" draggable="false" resizable="false"
+		widgetVar="modification">
+		<h:form id="modificationForm" prependId="false">
+			<p:growl id="messagesM" autoUpdate="true" />
+			<h:inputHidden value="#{clientBean.helper.client.client_id}" />
+
+			<h:panelGrid columns="3" styleClass="pnlGrd">
+				<p:outputLabel for="intituleM" value="#{msgBundle.client_intitule}" />
+				<p:outputLabel style="color:red" value="*" />
+				<p:inputText id="intituleM"
+					requiredMessage="#{msgBundle.client_message_intitule_obligatoire}"
+					validatorMessage="#{msgBundle.client_message_intitule_invalide}"
+					value="#{actionBean.helper.action.titre}" required="true">
+					<f:validateRegex pattern="^[a-zA-Z1-9éè ]*$" />
+				</p:inputText>
+				
+				<p:outputLabel for="adresseM"
+					value="#{msgBundle.client_adresse}" />
+				<p:spacer width="5px" />
+				<p:inputText id="adresseM"
+					validatorMessage="#{msgBundle.adresse_message_adresse_invalide}"
+					value="#{clientBean.helper.client.adresse}">
+					<f:validateRegex pattern="^[a-zA-Z1-9éè ]*$" />
+				</p:inputText>
+
+				<p:spacer width="5px" />
+				<p:spacer width="5px" />
+				<p:column>
+					<p:commandButton id="modificationBtnV"
+						action="#{clientBean.update}" update=":form"
+						value="#{msgBundle.button_valider}" icon="ui-icon-check"
+						style="margin:0" />
+					<p:spacer width="5px" />
+					<p:commandButton id="modificationBtnM" process="@this"
+						value="#{msgBundle.button_annuler}" action="#{clientBean.annuler}"
+						icon="ui-icon-close" style="margin:0" />
+				</p:column>
+
+			</h:panelGrid>
+			<br />
+		</h:form>
+	</p:dialog>
+</h:body>
+</html>

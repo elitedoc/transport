@@ -62,6 +62,7 @@
 		<beans:property name="sessionFactory"
 			ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
+	
 	<beans:bean id="bonLivraisonService" class="com.choukrani.service.BonLivraisonServiceImpl">
 		<beans:property name="bonLivraisonDAO" ref="bonLivraisonDAO"></beans:property>
 	</beans:bean>
@@ -70,6 +71,10 @@
 	</beans:bean>
 	<beans:bean id="factureService" class="com.choukrani.service.FactureServiceImpl">
 		<beans:property name="factureDAO" ref="factureDAO"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="clientBean" class="com.choukrani.ui.client.ClientBean">
+		<beans:property name="clientService" ref="clientService"></beans:property>
 	</beans:bean>
 
 	<context:component-scan base-package="com.choukrani" />

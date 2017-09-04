@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panel id="Listpnl" header="#{msgBundle.client_header}"
+		style="margin-bottom:10px;">
+		<div class="bs-callout bs-callout-info">
+			<h4>#{msgBundle.client_help_header}</h4>
+			<p>#{msgBundle.client_help_description1}</p>
+		</div>
+
+		<h:form id="form" prependId="false">
+			<h:panelGrid align="center" columns="2" styleClass="pnlGrd"
+				id="pnlGrid">
+				<p:dataTable var="v" value="#{clientBean.helper.liste}"
+					rendered="#{not empty clientBean.helper.liste}"
+					rowsPerPageTemplate="5,10,15" paginator="true" rows="5"
+					emptyMessage="#{msgBundle.no_record}"
+					filteredValue="#{clientBean.helper.filtered}" id="table">
+					
+					<p:column headerText="#{msgBundle.client_intitule}" sortBy="intitule"
+						filterBy="intitule" id="intitule" filterMatchMode="contains">
+						<h:outputText value="#{v.intitule}" />
+					</p:column>
+
+					<p:column headerText="#{msgBundle.client_adresse}"
+						sortBy="adresse" filterBy="adresse"
+						filterMatchMode="contains" id="adresse">
+						<h:outputText value="#{v.adresse}" />
+					</p:column>
+
+					<p:column headerText="#{msgBundle.header_clients}" id="client"
+						style="width:20%">
+						<p:spacer width="5px" />
+						<p:commandButton icon="ui-icon-pencil"
+							title="#{msgBundle.button_modifier}"
+							onclick="modification.show();"
+							action="#{clientBean.fetchToUpdate}" update=":modificationForm">
+							<f:setPropertyActionListener
+								target="#{clientBean.helper.selectedId}" value="#{v.client_id}" />
+						</p:commandButton>
+						<p:spacer width="5px" />
+						<p:commandButton icon="ui-icon-trash"
+							title="#{msgBundle.button_supprimer}" onclick="PF('cd').show();">
+							<f:setPropertyActionListener value="#{v.client_id}"
+								target="#{clientBean.helper.selectedId}" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+				<!--Message à afficher si aucun enregistrement n'a été trouvé  -->				
+				<p:outputLabel value="#{msgBundle.no_record}"
+					rendered="#{empty clientBean.helper.liste}" />
+			</h:panelGrid>
+			<p:commandButton value="#{msgBundle.button_ajouter}"
+				icon="ui-icon-check" onclick="ajout.show();">
+			</p:commandButton>
+
+		</h:form>
+
+	</p:panel>
+</ui:composition>

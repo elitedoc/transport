@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import java.sql.Date;
@@ -18,9 +20,9 @@ public class BonLivraison {
 	@Id
 	@Column(name="bon_livraison_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int bon_livraison_id;
+	private Long bon_livraison_id;
 	
-	private int numero_bon_livraison;
+	private Long numero_bon_livraison;
 	
 	private Date date_bon_livraison;
 	
@@ -36,23 +38,27 @@ public class BonLivraison {
 	
 	private float montant_ht;
 	
-//	private Client client;
+	@ManyToOne
+	@JoinColumn(name="fk_id_client")
+	private Client client;
 	
-//	private Facture facture;
+	@ManyToOne
+	@JoinColumn(name="fk_id_facture")
+	private Facture facture;
 	
-	public int getBon_livraison_id() {
+	public Long getBon_livraison_id() {
 		return bon_livraison_id;
 	}
 	
-	public void setBon_livraison_id(int bon_livraison_id) {
+	public void setBon_livraison_id(Long bon_livraison_id) {
 		this.bon_livraison_id = bon_livraison_id;
 	}
 	
-	public int getNumero_bon_livraison() {
+	public Long getNumero_bon_livraison() {
 		return numero_bon_livraison;
 	}
 	
-	public void setNumero_bon_livraison(int numero_bon_livraison) {
+	public void setNumero_bon_livraison(Long numero_bon_livraison) {
 		this.numero_bon_livraison = numero_bon_livraison;
 	}
 	
@@ -112,28 +118,28 @@ public class BonLivraison {
 		this.montant_ht = montant_ht;
 	}
 	
-//	public Client getClient() {
-//		return client;
-//	}
-//	
-//	public void setClient(Client client) {
-//		this.client = client;
-//	}
-//	
-//	public Facture getFacture() {
-//		return facture;
-//	}
-//	
-//	public void setFacture(Facture facture) {
-//		this.facture = facture;
-//	}
+	public Client getClient() {
+		return client;
+	}
+	
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	
+	public Facture getFacture() {
+		return facture;
+	}
+	
+	public void setFacture(Facture facture) {
+		this.facture = facture;
+	}
 
 	@Override
 	public String toString() {
 		return "BonLivraison [bon_livraison_id=" + bon_livraison_id + ", numero_bon_livraison=" + numero_bon_livraison
 				+ ", date_bon_livraison=" + date_bon_livraison + ", depart=" + depart + ", destination=" + destination
 				+ ", quantite=" + quantite + ", tarif=" + tarif + ", prix_unitaire=" + prix_unitaire + ", montant_ht="
-				+ montant_ht + ", client=" /*+ client*/ + ", facture=" /*+ facture*/ + "]";
+				+ montant_ht + ", client=" /*+ client*/ + ", facture=" + facture + "]";
 	}
 
 }

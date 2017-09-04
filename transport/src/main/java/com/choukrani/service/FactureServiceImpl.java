@@ -12,8 +12,6 @@ import com.choukrani.dao.FactureDAO;
 import com.choukrani.model.Facture;
 
 @Service
-@ManagedBean(name="factureService")
-@SessionScoped
 public class FactureServiceImpl implements FactureService {
 	
 	FactureDAO factureDAO;
@@ -39,6 +37,32 @@ public class FactureServiceImpl implements FactureService {
 	@Transactional
 	public List<Facture> listerFactures() {
 		return this.factureDAO.listerFactures();
+	}
+
+
+
+	@Override
+	@Transactional
+	public void modifierFacture(Facture fact) {
+		this.factureDAO.modifierFacture(fact);
+		
+	}
+
+
+
+	@Override
+	@Transactional
+	public void supprimerFacture(Long id) {
+		this.factureDAO.supprimerFacture(id);
+		
+	}
+
+
+
+	@Override
+	@Transactional
+	public Facture recupererFacture(Long id) {
+		return this.factureDAO.recupererFacture(id);
 	}
 
 }

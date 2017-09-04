@@ -1,11 +1,15 @@
 package com.choukrani.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity  
@@ -16,16 +20,22 @@ public class Client {
 	@Id
 	@Column(name="client_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int client_id;
+	private Long client_id;
 	
 	private String intitule;
 	
 	private String adresse;
 	
-	public int getClient_id() {
+	@OneToMany(mappedBy="client")
+	private List<Facture> listeFactures = new ArrayList<Facture>();
+	
+	@OneToMany(mappedBy="client")
+	private List<BonLivraison> listeBonsLivraison = new ArrayList<BonLivraison>();
+	
+	public Long getClient_id() {
 		return client_id;
 	}
-	public void setClient_id(int client_id) {
+	public void setClient_id(Long client_id) {
 		this.client_id = client_id;
 	}
 	public String getIntitule() {

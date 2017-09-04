@@ -12,8 +12,6 @@ import com.choukrani.dao.BonLivraisonDAO;
 import com.choukrani.model.BonLivraison;
 
 @Service
-@ManagedBean(name="bonLivraisonService")
-@SessionScoped
 public class BonLivraisonServiceImpl implements BonLivraisonService {
 	
 	BonLivraisonDAO bonLivraisonDAO;
@@ -33,6 +31,26 @@ public class BonLivraisonServiceImpl implements BonLivraisonService {
 	@Transactional
 	public List<BonLivraison> listerBonLivraison() {
 		return this.bonLivraisonDAO.listerBonLivraison();
+	}
+
+	@Override
+	@Transactional
+	public void modifierBonLivraison(BonLivraison bl) {
+		this.bonLivraisonDAO.modifierBonLivraison(bl);
+		
+	}
+
+	@Override
+	@Transactional
+	public void supprimerBonLivraison(Long id) {
+		this.bonLivraisonDAO.supprimerBonLivraison(id);
+		
+	}
+
+	@Override
+	@Transactional
+	public BonLivraison recupererBonLivraison(Long id) {
+		return this.bonLivraisonDAO.recupererBonLivraison(id);
 	}
 
 }

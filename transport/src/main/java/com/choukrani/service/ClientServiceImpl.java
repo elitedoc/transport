@@ -12,8 +12,6 @@ import com.choukrani.dao.ClientDAO;
 import com.choukrani.model.Client;
 
 @Service
-@ManagedBean(name="clientService")
-@SessionScoped
 public class ClientServiceImpl implements ClientService {
 	
 	ClientDAO clientDAO;
@@ -33,6 +31,26 @@ public class ClientServiceImpl implements ClientService {
 	@Transactional
 	public List<Client> listerClients() {
 		return this.clientDAO.listerClients();
+	}
+
+	@Override
+	@Transactional
+	public void modifierClient(Client cl) {
+		this.clientDAO.modifierClient(cl);
+		
+	}
+
+	@Override
+	@Transactional
+	public void supprimerClient(Long id) {
+		this.clientDAO.supprimerClient(id);
+		
+	}
+
+	@Override
+	@Transactional
+	public Client recupererClient(Long id) {
+		return this.clientDAO.recupererClient(id);
 	}
 
 	

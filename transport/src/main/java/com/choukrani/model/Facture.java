@@ -6,9 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity  
 @Table(name= "FACTURE")
@@ -18,9 +23,9 @@ public class Facture {
 	@Id
 	@Column(name="facture_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int facture_id;
+	private Long facture_id;
 	
-	private int numero_facture;
+	private Long numero_facture;
 	
 	private Date date_facture;
 	
@@ -32,21 +37,26 @@ public class Facture {
 	
 	private float total_tvac;
 	
-//	private Client client;
+	@ManyToOne
+	@JoinColumn(name="fk_id_client")
+	private Client client;
 	
-	public int getFacture_id() {
+	@OneToMany(mappedBy="facture")
+	private List<BonLivraison> listeBonsLivraison = new ArrayList<BonLivraison>();
+	
+	public Long getFacture_id() {
 		return facture_id;
 	}
 	
-	public void setFacture_id(int facture_id) {
+	public void setFacture_id(Long facture_id) {
 		this.facture_id = facture_id;
 	}
 	
-	public int getNumero_facture() {
+	public Long getNumero_facture() {
 		return numero_facture;
 	}
 	
-	public void setNumero_facture(int numero_facture) {
+	public void setNumero_facture(Long numero_facture) {
 		this.numero_facture = numero_facture;
 	}
 	
@@ -90,18 +100,26 @@ public class Facture {
 		this.total_tvac = total_tvac;
 	}
 	
-//	public Client getClient() {
-//		return client;
-//	}
-//	
-//	public void setClient(Client client) {
-//		this.client = client;
-//	}
+	public Client getClient() {
+		return client;
+	}
+	
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public List<BonLivraison> getListeBonsLivraison() {
+		return listeBonsLivraison;
+	}
+
+	public void setListeBonsLivraison(List<BonLivraison> listeBonsLivraison) {
+		this.listeBonsLivraison = listeBonsLivraison;
+	}
 
 	@Override
 	public String toString() {
 		return "Facture [facture_id=" + facture_id + ", numero_facture=" + numero_facture + ", date_facture="
 				+ date_facture + ", commentaire=" + commentaire + ", total_htva=" + total_htva + ", tva=" + tva
-				+ ", total_tvac=" + total_tvac + ", client=" /*+ client*/ + "]";
+				+ ", total_tvac=" + total_tvac + ", client=" + client + "]";
 	}
 }

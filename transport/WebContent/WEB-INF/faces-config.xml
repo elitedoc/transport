@@ -6,6 +6,16 @@
               http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <application>
+    <locale-config>
+			<default-locale>fr</default-locale>
+		</locale-config>
+		<message-bundle>
+            com.choukrani.transport.msg_error
+        </message-bundle>
+		<resource-bundle>
+			<base-name>com.choukrani.transport.messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
         <el-resolver>
             org.springframework.web.jsf.el.SpringBeanFacesELResolver
         </el-resolver>

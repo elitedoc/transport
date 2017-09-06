@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="../template/commonLayout.xhtml">
+	<ui:define name="page_title">
+				Clients
+	</ui:define>
+	<ui:define name="content">
+		<h:form id="formClients">
+			<!-- Validation Messages   -->
+			<p:messages id="errorMessageId" showDetail="false" severity="error"
+				autoUpdate="true" showSummary="true" closable="true" />
+			<p:messages id="warningMessageId" showDetail="false" severity="warn"
+				autoUpdate="true" showSummary="true" closable="true" />
+			<p:messages id="infoMessageId" showDetail="false" severity="info"
+				autoUpdate="true" showSummary="true" closable="true" />
+			<p:messages id="fatalMessageId" showDetail="false" severity="fatal"
+				autoUpdate="true" showSummary="true" closable="true" />
+
+			<!-- Loading bar  -->
+			<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+				header="Veuillez patienter" closable="false" resizable="false"
+				showHeader="true">
+				<p:graphicImage name="/images/ajaxloadingbar.gif" />
+			</p:dialog>
+			<p:ajaxStatus onstart="PF('statusDialog').show()"
+				onsuccess="PF('statusDialog').hide()"
+				onerror="PF('statusDialog').hide()" />
+
+			<!-- Confirmation Dialog   -->
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="explode">
+				<p:commandButton value="Oui" type="button"
+					styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+				<p:commandButton value="Non" type="button"
+					styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+			</p:confirmDialog>
+
+			<p:fieldset legend="Critères de recherche" id="rechercheFieldSetId" style="margin-bottom:20px">
+				 <p:panelGrid cellpadding="10" >
+     				  <p:row>
+						<p:column style="text-align:right;vertical-align:top;"><p:outputLabel for="intituleId"  value="N°/4-P.O" /></p:column>
+						<p:column style="vertical-align:top;">
+							<p:outputLabel for="intituleId" value=":" />
+						</p:column>
+						<p:column style="vertical-align:top;">
+							<p:inputText id="intituleId" value="#{clientBean.helper.client.intitule}"  style="width:217px;" />
+					     </p:column>									
+					</p:row>
+			       
+				</p:panelGrid>
+				 <p:panelGrid>
+					<p:row>
+				   		<p:column></p:column>
+  				   		<p:column  style="float:right;"  >
+  				   				<p:commandButton id="chercherCbId" update="@form" 
+  				   			                 value="#{msg['btn.chercher']}"
+  				   			                 icon="ui-icon-search" 
+  				   			                 process="@this,rechercheFieldSetId"
+  				   			                 actionListener="#{felicitationOfficierMB.chercher}"/>
+  				   			    <p:commandButton action="ajout" value="Ajouter" icon="ui-icon-plus" />
+ 				   		</p:column>
+  				    </p:row>
+  				</p:panelGrid>
+  			</p:fieldset>
+			
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

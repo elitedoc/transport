@@ -1,0 +1,1035 @@
+#button_div_message {
+	background: url("../resources/images/btn_mesg.png");
+	height: 67px;
+	width: 87px;
+	background-repeat: no-repeat;
+}
+
+.fc-event-time{
+display:none;
+}
+
+#button_div_config {
+	background: url("../resources/images/btn_config.png");
+	height: 67px;
+	width: 87px;
+	background-repeat: no-repeat;
+}
+
+.datalist-noborder .ui-widget-content {
+border: none;
+}
+
+.ui-breadcrumb 
+{
+	/** background: #ABCDEF !important;**/
+	font-style: italic;
+	font-family: serif;
+	/** color: red; **/
+}
+
+.ligne_verticale
+{
+    width:5px;
+    border-left:1px solid gray;
+    height:70px;
+}
+
+#button_div_profil {
+	background: url("../resources/images/btn_profil.png");
+	height: 67px;
+	width: 87px;
+	background-repeat: no-repeat;
+}
+
+#button_div_time {
+	background: url("../resources/images/btn_time.png");
+	height: 67px;
+	width: 87px;
+	background-repeat: no-repeat;
+}
+
+#button_div_logout {
+	background: url("../resources/images/btn_logout.png");
+	height: 67px;
+	width: 87px;
+	background-repeat: no-repeat;
+}
+
+#add_profil_btn {
+	background: url("../resources/images/btn_add_profil.png") no-repeat
+		scroll 0 0 rgba(0, 0, 0, 0);
+	height: 32px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-top: 4px;
+	text-align: center;
+	width: 130px;
+}
+
+a.btn {
+	background: url("../resources/images/bg_btn.png") repeat-x scroll 0 0
+		rgba(0, 0, 0, 0);
+	height: 32px;
+	text-align: center;
+	width: 130px;
+	font-size: 12px;
+	padding: 10px 10px 10px 20px;
+}
+
+ .subTable th{
+  display: none !important;
+ }
+
+#add_profil_btn {
+	background: url("../resources/images/btn_add_profil.png") no-repeat
+		scroll 0 0 rgba(0, 0, 0, 0);
+	height: 32px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-top: 4px;
+	text-align: center;
+	width: 130px;
+}
+
+#bouton {
+	margin: 50px auto 10px;
+	text-align: right;
+}
+
+a.btn  span.add:before {
+	content: url("../resources/images/add.png");
+	position: relative;
+	right: 8px;
+	top: 1px;
+}
+
+a.btn  span.search:before {
+	content: url("../resources/images/icon_search.png");
+	position: relative;
+	right: 8px;
+	top: 1px;
+}
+
+a.btn  span.save:before {
+	content: url("../resources/images/ico_save.png");
+	position: relative;
+	right: 8px;
+	top: 1px;
+}
+
+a.btn  span.delete:before {
+	content: url("../resources/images/icon_delete.png");
+	position: relative;
+	right: 8px;
+	top: 1px;
+}
+
+a.btn  span.print:before {
+	content: url("../resources/images/ico_print.png");
+	position: relative;
+	right: 8px;
+	top: 1px;
+}
+
+#page_title {
+	background: url("../resources/images/home_bg.jpg") repeat scroll 0 0
+		rgba(0, 0, 0, 0);
+	color: #C9BE9D;
+	font-size: 16px;
+	font-weight: bold;
+	height: 33px;
+	padding-top: 10px;
+	/*padding-left: 68px;    
+	margin-top: 5px; 
+ 	width: 200px;*/
+	padding-left: 0;
+	margin-top: -35px;
+	width: 250px;
+	text-align: center;
+}
+
+#nb_messages {
+	color: #FFFFFF;
+	font-weight: bold;
+	left: 15px;
+	padding: 0;
+	top: -65px;
+}
+
+#nb_configs {
+	color: #FFFFFF;
+	font-weight: bold;
+	left: 11px;
+	padding: 0;
+	top: -65px;
+}
+
+#pagination {
+	margin: 10px auto;
+}
+
+.rouge {
+	color: #A52121;
+	font-weight: bold;
+}
+
+.orange {
+	color: #E08433;
+	font-weight: bold;
+}
+
+.vert {
+	color: #3C9B26;
+	font-weight: bold;
+}
+
+.bleu {
+	color: #2B7EC6;
+	font-weight: bold;
+}
+
+.txt_arab {
+	text-align: right;
+	font-size: 20px;
+}
+
+/* ---------------- Style Tableau (dataTable) ---------------------- */
+#content .ui-datatable-tablewrapper,#content .ui-datatable-scrollable-header
+	{
+	border-spacing: 0;
+	font-size: 12px;
+	/*     width: 680px; */
+	width: 100%;
+	margin: 2px auto;
+}
+
+#content .ui-datatable-scrollable-header {
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+#content .ui-paginator.ui-widget-header {
+	width: 90%;
+	border: none;
+	padding: 0 0;
+	background: none;
+	margin: 0 auto;
+}
+
+#content .ui-datatable td .icon_even {
+	background-image: url("../resources/images/icon_plus.png")
+		background-position: 10px 5px;
+	background-repeat: no-repeat;
+	height: 20px;
+	padding-left: 30px;
+	
+}
+
+#content .ui-datatable td .icon_odd {
+	background: url("../resources/images/icon_minus.png");
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+	height: 20px;
+	padding-left: 30px;
+}
+
+/*style to center pencil's icon In Column */
+#content .ui-datatable .ui-row-editor .ui-icon-pencil {
+	float: inherit;
+	display: inline-block;
+}
+
+#content .ui-datatable  .ui-outputtext {
+	style ="float: left" !important;
+}
+
+/*
+#content .ui-datatable td .icon_search{
+    background: url("../resources/images/icon_search.png");
+    background-repeat: no-repeat;
+    height: 16px;
+	width: 16px;
+}
+
+#content .ui-datatable td .icon_edit{
+    background: url("../resources/images/icon_edit.png");
+    background-repeat: no-repeat;
+    height: 15px;
+	width: 22px;
+}
+#content .ui-datatable td .icon_delete{
+    background: url("../resources/images/icon_delete.png");
+    background-repeat: no-repeat;
+    height: 13px;
+	width: 13px;
+}
+
+ */
+#content a.icon_edit:before {
+	content: url("../resources/images/icon_edit.png");
+	height: 15px;
+	width: 22px;
+	margin: 0 5px;
+}
+
+#content a.icon_search:before {
+	content: url("../resources/images/icon_search.png");
+	height: 16px;
+	width: 26px;
+	margin: 0 5px;
+}
+
+#content a.icon_delete:before {
+	content: url("../resources/images/icon_delete.png");
+	height: 13px;
+	width: 13px;
+	margin: 0 5px;
+}
+
+#content .ui-datatable tr {
+	/*     height: 35px; */
+	border: none;
+}
+
+#content .ui-datatable td {
+	/*     height: 35px; */
+	/* border: none; */
+	border: 1px solid #A8A8A8 !important;
+}
+#content .ui-datatable .ui-datatable-even {
+	background-color: #FFFF99;
+}
+
+#content .ui-datatable .ui-datatable-odd {
+	background-color: #FFF;
+}
+
+#content .ui-datatable thead {
+	background: url("../resources/images/header_profils_table.png");
+	background-repeat: no-repeat;
+	height: 34px;
+	width: 638px;
+	/*font-size: 8px;*/
+}
+
+#content .ui-datatable .icon_paginate {
+	background: url("../resources/images/btn_paginate.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	margin-left: 10px;
+	text-align: center;
+	width: 21px;
+}
+
+#content .ui-datatable thead th.ui-state-default {
+	/* background: none; */
+	padding: 0 0;
+}
+
+#content .ui-datatable thead tr {
+	height: 25px;
+}
+
+#content .ui-datatable .td_action a {
+	float: left;
+	padding: 0 5px;
+}
+
+#content .ui-datatable.ui-widget.noBackground .ui-datatable-data tr {
+	background-color: transparent;
+}
+
+#content tbody.ui-datatable-data,#content .ui-datatable .ui-datatable-even td,#content .ui-datatable .ui-datatable-odd td,#content .ui-datatable thead th,#content .ui-widget-content tr,#content .ui-widget-content td
+	{
+	border: none;
+}
+
+.ui-panelgrid-header,.ui-panelgrid.ui-widget table,.ui-panelgrid.ui-widget tr,.ui-panelgrid.ui-widget th,.ui-panelgrid.ui-widget td
+	{
+	/*border: none;*/
+	border-style: inset !important;
+	border-color: black;
+	padding: 4px 10px;
+	background: none;
+	border-style: none !important;
+}
+
+#content .vertical-header th {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	background: none;
+	font-stretch: ultra-expanded;
+	font-size:12px;
+	border: 1px solid #A8A8A8 !important;
+}
+
+/* #content .vertical-header td { */
+/* 	border: 1px solid #A8A8A8 !important; */
+/* } */
+
+#content .vertical-header th,#content .ui-datatable th {
+	background: none;
+	border: 1px solid #A8A8A8 !important;
+}
+
+/* #content .ui-datatable.vertical-header thead tr */
+#content .ui-datatable.vertical-header thead,#content .ui-datatable thead
+	{
+	background: -webkit-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -ms-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -o-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+}
+
+#content .ui-datatable.vertical-header thead {
+	height: 250px;
+/* 	width:150px; */
+}
+
+#content .vertical-header .ui-datatable .ui-state-default,#content .ui-datatable .ui-state-default
+	{
+	box-shadow: 0 0;
+}
+
+#content .ui-fieldset-content table {
+	width: 100%;
+}
+
+#content .ui-datatable-scrollable table,#content .ui-datatable-sticky table
+	{
+	table-layout: fixed;
+}
+
+#content .ui-datatable.ui-datatable-scrollable th,#content .ui-datatable.ui-datatable-scrollable tr,#content .ui-datatable-scrollable-body .ui-datatable-data th,#content .ui-datatable-scrollable-body .ui-datatable-data tr,#content .ui-datatable-scrollable-body colgroup col
+	{
+	width: 150px !important;
+}
+
+#content .fusionnement .ui-datatable-scrollable-body colgroup col:nth-child(6),#content .fusionnement .ui-datatable-scrollable-body colgroup col:nth-child(7)
+	{
+	width: 76px !important;
+}
+
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th,#content .fusionnement.complementaire .ui-datatable-tablewrapper tr
+	{
+	padding: 3px;
+}
+
+.fusionnement.complementaire tr,.fusionnement.complementaire th,.fusionnement.complementaire td,.fusionnement tr,.fusionnement th,.fusionnement td
+	{
+	border: 1px solid #A8A8A8 !important;
+}
+
+/*
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(7), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(7),
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(8), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(8),
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(9), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(9),
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(10), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(10),
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(11), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(11),
+#content .fusionnement.complementaire .ui-datatable-tablewrapper th:nth-child(12), #content .fusionnement.complementaire .ui-datatable-tablewrapper tr:nth-child(12)
+{
+	width:26px !important;
+}
+
+/*
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(7),
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(8),
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(9),
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(10),
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(11),
+#content .fusionnement.complementaire .ui-datatable-scrollable-body colgroup col:nth-child(12)
+{
+	width:26px !important;
+} */
+#content .ui-datatable.ui-widget.multiSelect .ui-datatable-tablewrapper
+	{
+	width: 270px;
+	min-height: 270px;
+}
+
+/* ---------------- FIN Style Tableau (dataTable) ---------------------- */
+div.invisible {
+	display: none !important;
+}
+
+div.visible {
+	display: block !important;
+}
+
+/* ---------------- Style Fieldset ---------------------- */
+#content .ui-fieldset.ui-widget-content {
+	/* 	width: 680px; */
+	margin: 0px 5px;
+}
+
+#content .ui-fieldset .ui-fieldset-legend {
+	padding: 5px 5px;
+	background-color: #F5F5F5;
+	background-image: none;
+	border-radius: 5px;
+}
+
+#content .ui-panelgrid td {
+	padding: 5px 5px !important;
+}
+
+/* ---------------- FIN Style Fieldset ---------------------- */
+
+/* ---------------- Style des boutons ---------------- */
+#content .ui-button.ui-widget.ui-state-default {
+	background-color: #EEE;
+	font-size: 12px !important;
+}
+
+#content .ui-button-text-icon-left .ui-button-text {
+	padding: 4px 10px 4px 30px;
+}
+/* ---------------- FIN Style des boutons ---------------- */
+
+/* ---------------- Style des onglets ---------------- */
+.ui-tabs-nav .ui-tabs-selected.ui-state-active a,.ui-tabs-nav a {
+	color: #4F4F4F !important;
+}
+
+.ui-tabs-nav .ui-tabs-selected.ui-state-active.ui-state-hover a,.ui-tabs-nav .ui-state-hover a
+	{
+	color: #1F1F1F !important;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-selected {
+	background: #FCFCFC;
+}
+
+.ui-tabs .ui-tabs-nav {
+	/*      background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0 #E3E3E3; */
+	background: none !important;
+}
+.ui-tabs-left > .ui-tabs-nav
+{
+	width:10%;
+	height:100%;
+	border :none ;
+}
+
+
+.ui-tabs-left > .ui-tabs-panels {
+    width: 90%;
+}
+
+.ui-tabs .ui-tabs-panel {
+	    padding: 0px !important;
+    margin:0px !important;
+}
+/* ---------------- FIN Style des onglets ---------------- */
+#content label {
+	font-size: 12px !important;
+	font-weight: bold !important;
+	padding-right: 5px;
+}
+
+#content .ui-widget-content a {
+	color: #497DA3;
+	font-weight: bold;
+}
+
+#content .ui-widget-content a:hover {
+	color: #5693BF;
+	text-decoration: underline;
+}
+
+#content .ui-widget select {
+	width: 220px;
+}
+
+#content .ui-widget .ui-datatable select {
+	width: 90%;
+}
+
+#content .ui-widget .top-right select {
+	width: inherit;
+}
+
+.b-right {
+	text-align: right;
+}
+
+#content .field-right {
+	float: right;
+}
+
+#hide-bouton {
+	height: 20px;
+	width: 20px;
+	margin-left: 10px;
+	background: -webkit-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -ms-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: -o-linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4;
+	background: linear-gradient(center top, rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0)) repeat scroll 0 0 #C4C4C4
+}
+
+.top-right {
+	/*position: absolute;
+	top:50px;
+	right:6px;*/
+	position: relative;
+	bottom: 30px;
+	left: 2px;
+	text-align: right;
+}
+
+/*  ---------- Style Information du gendarme  ---------- */
+.photo {
+	width: 100px;
+	height: 130px;
+	border: 2px solid;
+}
+
+#photo img {
+	padding: 5px;
+}
+
+.info_column {
+	width: 30%;
+}
+/* ---------- FIN Style Information du gendarme  ---------- */
+:required,.required:after {
+	content: "*";
+	color: red;
+	font-weight: bold;
+	display: none !important;
+}
+
+.ongletContent {
+	/* 	width:75%; */
+	width: 84%;
+	float: right;
+}
+
+#content h3.subtitle {
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.ui-scrollpanel {
+	border: none;
+}
+
+#content .ui-widget .ui-paginator select {
+	width: initial;
+}
+/* ---------- Style Message erreur en mode d�veloppement  ---------- *
+#javax_faces_developmentstage_messages {
+    background: none repeat scroll 0 0 #EEEEEE;
+    box-shadow: 2px 2px #CCCCCC;
+    margin: 10px 15px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 4px;
+    z-index: 10;
+}
+
+/* ---------- FIN Style Message erreur en mode développement  ---------- */
+
+/* --- Style pour le Menu : DEBUT --
+.ui-accordion-content {
+	padding: 0px 0px 0px 0px !important;
+	font-style: italic;
+	font-size: smaller;
+}*/
+/* --- Style pour le Menu : FIN --*/
+
+/* --- Style de ligne selectionnée : DEBUT ---*/
+.ui-datatable tr.ui-state-highlight {
+	background-color: yellow !important;
+	text-transform: uppercase;
+}
+
+/* --- Style de ligne selectionnée : FIN ---*/
+
+/* +  Grid Div Primefaces */
+.ui-grid {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ui-grid:before,.ui-grid:after {
+	content: "";
+	display: table;
+}
+
+.ui-grid:after {
+	clear: both;
+}
+
+.ui-grid .ui-grid-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	clear: both;
+}
+
+.ui-grid-row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.pourpanel {
+	width: 200px;
+}
+
+.pourdt {
+	width: 100%;
+}
+
+.vide {
+	width: 12px;
+}
+
+@media ( min-width : 480px) {
+	.ui-grid-fixed {
+		width: 480px;
+	}
+}
+
+@media ( min-width : 768px) {
+	.ui-grid-fixed {
+		width: 768px;
+	}
+}
+
+@media ( min-width : 960px) {
+	.ui-grid-fixed {
+		width: 960px;
+	}
+}
+
+@media ( min-width : 1024px) {
+	.ui-grid-fixed {
+		width: 1024px;
+	}
+}
+
+/* Responsive */
+@media ( max-width : 35em) {
+	.ui-grid-responsive .ui-grid-row {
+		display: block;
+	}
+	.ui-grid-responsive
+	 
+	.ui-grid-col-6
+	,
+	{
+	width
+	:
+	 
+	100%;
+	float
+	:
+	 
+	none
+	;
+	
+    
+}
+
+}
+
+/* +  Fin Grid Div Primefaces */
+
+/*Apply to Specific panelgrid*/
+.ui-panelgrid.panelStyle.ui-panelgrid.ui-widget td {
+	border: 1px solid white !important;
+	padding: 4px 10px important;
+}
+
+/*Apply to Specific panelgrid*/
+.ui-panelgrid.recrutement-panelStyle.ui-panelgrid.ui-widget td {
+	border: 1px solid #CCCCE1!important;
+	padding: 4px 10px important;
+}
+
+.ui-panelgrid.avancement-panelStyle.ui-panelgrid.ui-widget td {
+	border: 1px solid #FFD6D6!important;
+	padding: 4px 10px important;
+}
+
+.ui-panelgrid.avancement-sof-panelStyle.ui-panelgrid.ui-widget td {
+	border: 1px solid #497A49 !important;
+	padding: 4px 10px important;
+}
+
+.text-input {
+	background-image: url("#{resource['img:off/Capitaine.png']}") color: red;
+}
+/******************************************************
+** Titres *********************************************
+******************************************************/
+.titre {
+	background: #FFF url("#{resource['img:bg_titre.png']}") center left
+		repeat;
+	padding: 0 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #45708F;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.titre2 {
+	background: #FFF url("#{resource['img:bg_h3.png']}") center left
+		no-repeat;
+	padding: 0 0 0 30px;
+	min-height: 10px;
+	margin: 5px 0;
+}
+
+.titre3 {
+	background: #FFF;
+	padding: 0 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #45708F;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.element {
+	color: #ff4045;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-decoration: underline;
+}
+
+.CU_Color {
+	background-color: #ff3737 !important;
+	color: #000000 !important;
+}
+
+.Officier_Panel_Color {
+	background-color: #FFE7E7 !important;
+}
+
+.SS_Officier_Panel_Color {
+	background-color: #E0FFE0 !important;
+}
+
+.categorie1_Color {
+	background-image: none !important;
+	color: #0080ff !important;
+}
+
+.categorie2_Color {
+	background-image: none !important;
+	color: #ff8000 !important;
+}
+
+.inaccessible_color {
+	background: #808080 !important; 
+	color: white !important;
+}
+
+.rouge_color {
+	background: #FF0000 !important; 
+	color: white !important;
+}
+
+.orange_color {
+	background: #FFA500 !important; 
+	color: white !important;
+}		
+
+.categorie3_Color {
+	background-image: none !important;
+	color: #008040 !important;
+}
+
+.vertAlign {
+	vertical-align: center writing-mode: vertical-lr;
+}
+
+/*  ---------- Style User ToolBar  ---------- */
+
+#idToolbar
+{
+	/** background-image:none; **/
+	background : url("../resources/images/gr_bleu_bandeau.png");
+	border : none ;
+	margin : 1px ;
+	height : 110px;
+	box-shadow: 1px 1px 5px 0px #2d65b0;
+}
+
+.toolbarButton .ui-button
+{
+	opacity: 0.9 !important;
+	color:  #045FB4 !important;
+	font-style : oblique ;
+    border: none !important;
+    margin-top:87px ;
+    margin-right:-2px ;
+}
+
+
+/*  ---------- FIN Style User ToolBar  ---------- */
+
+.blue_badge {
+	display: inline-block !important;
+	min-width: 10px !important;
+	padding: 3px 7px !important;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	color: #fff !important;
+	text-align: center !important;
+	white-space: nowrap !important;
+	vertical-align: baseline !important;
+	background-color: #084B8A !important;
+	border-radius: 10px !important;
+}
+
+.red_badge {
+	display: inline-block !important;
+	min-width: 10px !important;
+	padding: 3px 7px !important;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	color: #fff !important;
+	text-align: center !important;
+	white-space: nowrap !important;
+	vertical-align: baseline !important;
+	background-color: red !important;
+	border-radius: 10px !important;
+}
+
+
+
+.blue_badge_espace {
+	padding: 3px 7px !important;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	color: #2E9AFF !important;
+	text-align: center !important;
+	background: none !important ;
+	border-radius:50% !important;
+	border: 3px inset  !important;
+	border-color: #2E9AFF !important; 
+}
+
+.red_badge_espace {
+	padding: 3px 7px !important;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	color: red !important;
+	text-align: center !important;
+	background: none !important ;
+	border-radius:50% !important;
+	border: 3px inset  !important;
+	border-color: red !important; 
+}
+
+.stylish {
+	display: block !important;
+	width: 140px !important;
+	height: 140px !important;
+	border-radius:50% !important;
+	border: 3px outset  !important;
+	font: italic small-caps bold 18px Georgia, sans-serif !important;
+	color: #666 !important;
+	line-height: 100px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 #fff !important; 
+	background: none !important ;
+	line-height:150px !important;
+}
+
+.stylish:hover {
+	border: 3px inset  !important;
+	color: #aaa !important;
+	text-decoration: none !important;
+	background: #F1F4F7 !important;
+}
+
+.ui-state-disabled {
+	opacity: 0.55 !important;
+}
+
+.ui-widget {
+    font-family: 'Trebuchet MS' !important;
+    font-size: 10px;
+}
+
+.ui-panelgrid-cell {
+	/** text-align:right !important; **/
+}
+
+
+#content label {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding-right: 5px;
+}
+.ui-selectonemenu label.ui-selectonemenu-label {
+    cursor: pointer;
+}
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
+    background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 2px 2px #8f8f8f inset;
+    color: #2e6e9e;
+}
+.ui-selectonemenu .ui-selectonemenu-label{
+	width:auto !important;
+}
+
+span.ui-outputlabel-rfi{
+	color:red !important;
+	display: none !important;
+}
+
+tr.reengagement_reengagement_color {
+	background : none !important;
+	color: #0080ff !important;
+}
+
+tr.reengagement_liberation_color  {
+	background : none !important;
+	color: #ff8000 !important;
+}
+
+tr.reengagement_retraite_color {
+	background : none !important;
+	color: #008040 !important;
+}
+
+.reengagement_discipline_color {
+	background : none !important;
+	color: red !important;
+}
+
+.ui-picklist-list {
+width: 300px !important;
+height: 300px !important;
+}

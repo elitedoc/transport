@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="id" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<ui:insert name="head" />
+	<title>CHOUKRANI Transport</title>
+	<script type="text/javascript">
+		//alert('JQuery test by rabii');
+		PrimeFaces.locales ['ff'] = {
+			    closeText: 'Fermer',
+			    prevText: 'Précédent',
+			    nextText: 'Suivant',
+			    monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+			    monthNamesShort: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ],
+			    dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			    dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+			    dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+			    weekHeader: 'Semaine',
+			    firstDay: 1,
+			    isRTL: false,
+			    showMonthAfterYear: false,
+			    yearSuffix:'',
+			    timeOnlyTitle: 'Choisir l\'heure',
+			    timeText: 'Heure',
+			    hourText: 'Heures',
+			    minuteText: 'Minutes',
+			    secondText: 'Secondes',
+			    currentText: 'Maintenant',
+			    ampm: false,
+			    month: 'Mois',
+			    week: 'Semaine',
+			    day: 'Jour',
+			    allDayText: 'Toute la journée'
+			};
+	</script>
+	
+</h:head>
+<h:body>
+	<h:outputStylesheet library="css" name="default.css"  />
+	<h:outputStylesheet library="css" name="style.css"  />
+	<h:outputStylesheet library="css" name="style_off.css"  />
+	<h:outputScript library="js" name="custom.js" />	
+
+	<p:layout fullPage="true">
+				<p:layoutUnit position="north" size="156" resizable="false" closable="false" collapsible="false" style="border:0;">
+					<div id="header">
+						<ui:insert name="header" >
+							<ui:include src="commonHeader.xhtml" />
+						</ui:insert>
+					</div>
+				</p:layoutUnit>
+				<p:layoutUnit position="west" header="GRH" resizable="true" closable="false" collapsible="true">
+						<div id="leftMenu">
+								<ui:include src="leftMenu.xhtml" />		
+						</div>
+				</p:layoutUnit>
+				<p:layoutUnit position="center">
+					<div id="content">
+					   	<ui:insert name="content" >
+					   		<ui:include src="commonContent.xhtml" />
+					   	</ui:insert>
+				    </div>			
+				</p:layoutUnit>
+			<br />
+			<div id="shape_bottom_page"></div>		
+			<p:layoutUnit position="south" size="60" header="" resizable="true" closable="false" collapsible="false">
+				<div id="footer" align="center">
+					<ui:include src="commonFooter.xhtml" />
+				</div>
+			</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

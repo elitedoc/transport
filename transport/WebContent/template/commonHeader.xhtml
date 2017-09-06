@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:f="http://java.sun.com/jsf/core">
+    <body>
+	    <ui:composition>	
+			<div  align="center" >
+				<p:toolbar id="idToolbar" >
+						<f:facet  name="right">
+					    	<h:form>
+					    		<span class="ui-separator">
+               						<span class="ui-icon ui-icon-grip-dotted-vertical" />
+      					      	</span>
+	         			   		<p:menuButton rendered="true" iconPos="right" styleClass="toolbarButton" value="Mohammed">
+	         			   			<p:menuitem>
+		         			   			<h:graphicImage  style="width:160px;height:auto;" id="idPhotoOfficier"
+											cache="false"
+											value="" />
+	         			   			</p:menuitem>
+	         			   			<p:menuitem>
+	         			   				<a href="">
+	         			   					<p:commandButton title="Se déconnecter" ajax="false" icon="ui-icon-power"/>
+	         			   				</a>
+	      					      			<p:commandButton value="Mon profil" title="Mon profil"  icon="ui-icon-person"/>
+		         			   		</p:menuitem>
+	            				</p:menuButton>
+	            			</h:form>
+	        			</f:facet>
+	        	</p:toolbar>
+ 			</div>							
+	    </ui:composition>
+    </body>
+</html>

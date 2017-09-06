@@ -1,0 +1,50 @@
+#user_name #icon_user_name {
+    background-image: url("../resources/images/icon_user_off.png");
+}
+
+#button_div_message {
+    background-image: url("../resources/images/btn_mesg_off.png");
+}
+
+#button_div_config {
+    background-image: url("../resources/images/btn_config_off.png");
+
+}
+
+#button_div_profil {
+    background-image: url("../resources/images/btn_profil_off.png");
+}
+
+#button_div_time {
+    background-image: url("../resources/images/btn_time_off.png");
+
+}
+
+#button_div_logout {
+    background-image: url("../resources/images/btn_logout_off.png");
+
+}
+
+
+#leftMenu .ui-accordion-header.ui-state-default.ui-state-active,
+#leftMenu .ui-accordion-header.ui-state-default.ui-state-hover 
+{
+	background-color:#26abc0;
+	box-shadow: 0 0 5px #26ABC0;
+	color:#ffffff;
+}
+
+#page_title,
+#leftMenu .ui-menuitem-link.ui-corner-all.ui-state-active,
+#leftMenu .ui-menuitem-link.ui-corner-all.ui-state-hover
+{
+	color:#26abc0;
+}
+
+#content .ui-datatable .ui-datatable-even
+{
+	background-color: #F2F5F9;
+}
+
+
+

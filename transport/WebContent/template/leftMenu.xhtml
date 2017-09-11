@@ -7,25 +7,17 @@
 	<body>
 		<h:form id="formMenu">
 			<div align="center" >
-				<h:commandLink>
-					<h:graphicImage name="/images/icones_off1.png" />
-				</h:commandLink>
-				<a href=""><h:graphicImage name="/images/icones_off2.png" /></a>
+				
 			</div>							
 		 	<p:accordionPanel id="operationMenu" activeIndex="">
 		 		<!-- Clients -->
-		 		<p:tab id="clientId" title="CLIENTS" url="" icon="ui-icon-notice"> 		
-		 		</p:tab>
-				<!-- Bons de livraison -->
-				<p:tab id="admin" title="Bons de livraison" url="" icon="ui-icon-notice">
-				</p:tab>
-				<p:tab title="Factures" icon="ui-icon-notice">
-					
-				</p:tab>
-				<p:separator />
-				<p:tab id="client" title="CLIENTS" url="" icon="ui-icon-notice"> 		
-		 		</p:tab>
-					
+		 		<p:tab id="facturationId" title="FACTURATION" icon="ui-icon-notice">
+		 		<p:menu>
+						<p:menuitem value="CLIENTS"  url="/client/client.xhtml" />
+						<p:menuitem value="FACTURES"  url="" />
+						<p:menuitem value="BONS DE LIVRAISON"  url="" />
+					</p:menu>	
+		 		</p:tab>	
 			</p:accordionPanel>
 		</h:form>
 	</body>

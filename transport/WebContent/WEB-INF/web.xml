@@ -4,7 +4,7 @@
   <display-name>CHOUKRANI Transport</display-name>
   
   <welcome-file-list>
-    <welcome-file>client/liste.xhtml</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
 </welcome-file-list>
 
 

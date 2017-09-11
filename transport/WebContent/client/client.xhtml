@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="../template/layout.xhtml">
+		<ui:define name="page_title">
+				Client
+		</ui:define>
+		<ui:define name="content">
+		
+		<h:form id="idForm" enctype="multipart/form-data">
+		
+		<!-- Loading bar  -->
+				<p:dialog widgetVar="statusDialog" modal="false" draggable="false"
+					closable="false" resizable="false" showHeader="false">
+					<p:graphicImage name="/images/ajaxloadingbar.gif" />
+				</p:dialog>
+				<p:ajaxStatus onstart="PF('statusDialog').show()"
+					onsuccess="PF('statusDialog').hide()" />
+
+				<!-- Confirmation Dialog   -->
+				<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+					<p:commandButton value="Oui" type="button"
+						styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+					<p:commandButton value="Non" type="button"
+						styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+				</p:confirmDialog>
+
+				<!-- Validation Messages   -->
+				<p:messages id="errorMessageId" showDetail="false" severity="error"
+					autoUpdate="true" showSummary="true" closable="true" />
+				<p:messages id="warningMessageId" showDetail="false" severity="warn"
+					autoUpdate="true" showSummary="true" closable="true" />
+				<p:messages id="infoMessageId" showDetail="false" severity="info"
+					autoUpdate="true" showSummary="true" closable="true" />
+				<p:messages id="fatalMessageId" showDetail="false" severity="fatal"
+					autoUpdate="true" showSummary="true" closable="true" />
+		
+			<p:panel id="idPanelClient">
+		<p:panel id="idClientForm" header="Blessure"
+			style="background-color: #FAFAFA !important;background:none"
+			collapsed="#{!(clientBean.clientEditFormVisible)}"
+			toggleable="true">
+			<center>
+				<p:panelGrid cellpadding="10" style="width:70%; border: 1px solid #008AB8;box-shadow: 2px 2px 2px #aaa;">
+					<p:row>
+						<p:column style="height: 5px"></p:column>
+					</p:row>
+					<p:row>
+						<p:column  style="text-align:right;">
+							<p:outputLabel for="intituleclient" value="Intitule" />
+							<p:outputLabel style="color:red" value="*" />
+						</p:column>
+						<p:column>
+							<h:outputText value=":" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{clientBean.client.intitule}"
+								id="intituleclient" required="true" size="40"
+								requiredMessage="- Veuillez renseigner l'intitule du client" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column  style="text-align:right;">
+							<p:outputLabel for="adresseclient" value="Adresse" />
+							<p:outputLabel style="color:red" value="*" />
+						</p:column>
+						<p:column>
+							<h:outputText value=":" />
+						</p:column>
+						<p:column>
+							<p:inputTextarea value="#{clientBean.client.adresse}"
+								id="adresseclient" required="true" autoResize="true" counter="adresseClientCounter" counterTemplate="{0} caractères restants" maxlength="255" cols="75" rows="7"
+								requiredMessage="- Veuillez renseigner l'adresse du client" />
+								<br/>
+							<p:outputLabel id="adresseClientCounter"/>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column colspan="6" style="text-align:right">
+							<p:commandButton
+								rendered="#{!clientBean.clientEditFormVisible}"
+								id="clientAdd" process=":idForm:idPanelClient"
+								update=":idForm:idPanelClient"
+								action="#{clientBean.ajouterClientAction}" value="Ajouter"
+								icon="ui-icon-plusthick" />
+							<p:commandButton rendered="#{clientBean.clientEditFormVisible}"
+								id="clientUpdate" process=":idForm:idPanelClient"
+								update=":idForm:idPanelClient"
+								action="#{clientBean.updateClientAction}" value="Modifier"
+								icon="ui-icon-pencil" />
+							<p:commandButton id="clientCancel" process="@this"
+								update=":idForm:idPanelClient"
+								action="#{clientBean.clientCancel}" value="Annuler"
+								icon="ui-icon-cancel" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</center>
+		</p:panel>
+		<p:panelGrid cellpadding="10">
+			<p:row>
+				<p:column>
+					<p:dataTable id="idClientTable" var="client"
+						value="#{clientBean.listeClients}" emptyMessage="Aucun client"
+						style="width:100%;" paginator="true" paginatorPosition="bottom"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						rows="6" rowsPerPageTemplate="6,12,16">
+						<p:column headerText="Intitule">
+							<h:outputText value="#{client.intitule}" />
+						</p:column>
+						<p:column headerText="Adresse">
+							<h:outputText value="#{client.adresse}" />
+						</p:column>
+						<p:column headerText="Actions" style="width:10%;">
+							<p:commandButton
+								action="#{clientBean.showClientEditFormAction(client)}"
+								process="@this" update=":idForm:idPanelClient:idClientForm"
+								icon="ui-icon-pencil"></p:commandButton>
+							<p:commandButton
+								action="#{clientBean.supprimerClientAction(Client)}"
+								update="idClientTable" process="@this" icon="ui-icon-trash"
+								rendered="false">
+								<p:confirm header="Confirmation"
+									message="Êtes vous sûr de vouloir effectuer cette action ?"
+									icon="ui-icon-alert" />
+							</p:commandButton>
+						</p:column>
+					</p:dataTable>
+				</p:column>
+			</p:row>
+		</p:panelGrid>
+	</p:panel>
+			
+			</h:form>
+			
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

@@ -45,14 +45,7 @@
 	<h:outputScript library="js" name="custom.js" />	
 
 	<p:layout fullPage="true">
-				<p:layoutUnit position="north" size="156" resizable="false" closable="false" collapsible="false" style="border:0;">
-					<div id="header">
-						<ui:insert name="header" >
-							<ui:include src="commonHeader.xhtml" />
-						</ui:insert>
-					</div>
-				</p:layoutUnit>
-				<p:layoutUnit position="west" header="GRH" resizable="true" closable="false" collapsible="true">
+				<p:layoutUnit position="west" header="CHOUKRANI Transport" resizable="true" closable="false" collapsible="true">
 						<div id="leftMenu">
 								<ui:include src="leftMenu.xhtml" />		
 						</div>
@@ -60,7 +53,7 @@
 				<p:layoutUnit position="center">
 					<div id="content">
 					   	<ui:insert name="content" >
-					   		<ui:include src="commonContent.xhtml" />
+					   		<ui:include src="content.xhtml" />
 					   	</ui:insert>
 				    </div>			
 				</p:layoutUnit>
@@ -68,7 +61,7 @@
 			<div id="shape_bottom_page"></div>		
 			<p:layoutUnit position="south" size="60" header="" resizable="true" closable="false" collapsible="false">
 				<div id="footer" align="center">
-					<ui:include src="commonFooter.xhtml" />
+					<ui:include src="footer.xhtml" />
 				</div>
 			</p:layoutUnit>
 	</p:layout>

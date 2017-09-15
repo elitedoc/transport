@@ -2,6 +2,7 @@ package com.choukrani.ui.client;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.application.FacesMessage.Severity;
 import javax.faces.bean.ManagedBean;
@@ -27,6 +28,8 @@ public class ClientBean {
 	
 	@ManagedProperty(value = "#{clientService}")
 	ClientService clientService;
+	
+	@PostConstruct
 	public void init()
 	{
 		try{
@@ -38,7 +41,7 @@ public class ClientBean {
 		}
 		catch(Exception ex)
 		{
-			addMessage(FacesMessage.SEVERITY_FATAL, "Un problème s'est produit lors du chargement des clients" );
+			addMessage(FacesMessage.SEVERITY_FATAL, " proUnblème s'est produit lors du chargement des clients" );
 		}
 		
 	 }
